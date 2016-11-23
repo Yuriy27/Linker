@@ -16,9 +16,10 @@ public class Link {
 
     private String url;
 
-    public Link() {}
+    public Link() {
+    }
 
-    public Link(String key, String url) {
+    public Link(int id, String key, String url) {
         this.key = key;
         this.url = url;
     }
@@ -37,6 +38,14 @@ public class Link {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     @Override

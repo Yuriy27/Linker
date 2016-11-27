@@ -19,7 +19,10 @@ public class HomeController {
         return "index.html";
     }
 
-    @RequestMapping(value = "/--/{key}", method = RequestMethod.GET)
+    @RequestMapping("/dev")
+    public String dev() { return "devs.html"; }
+
+    @RequestMapping(value = "/--/{key}", method = { RequestMethod.GET, RequestMethod.POST })
     public RedirectView redirect(@PathVariable("key") String key) {
         RedirectView view = new RedirectView();
         String url = service.getUrlByKey(key);

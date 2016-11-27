@@ -13,14 +13,26 @@
     </div>
     <div class="content">
         <div class="descr">
-            description.....
+            Linker API for developers. You can automate cutting process.<br>
+            For this you should call 'localhost:8080/api' with parametr 'url'.<br>
+            Method can be 'GET' or 'POST'.<br><br>
+            Examples:<br>
+            js: <br>
         </div>
-        <div class="form">
-            <input type="text" id="link">
-            <button type="button" onclick="cut()">Cut</button>
+        <div class="code_ex">
+            <code>
+                    <pre>$.ajax({
+    url: location.origin + "/api?url=some_url",
+    type: "GET",
+    success: function (resp) {
+        //do something with response
+    }
+})
+                    </pre>
+            </code>
         </div>
-        <div class="result" id="result"></div>
-        <h4><a href="/dev">API (for developers)</a></h4>
+
+        <h4><a href="/">Home</a></h4>
     </div>
     <div class="footer">
         <div class="about">
@@ -28,8 +40,6 @@
         </div>
     </div>
 </div>
-<!--JavaScript -->
-<script src="js/index.js"></script>
 <!--JavaScript for bootstrap-->
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
